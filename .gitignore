@@ -1,6 +1,9 @@
 # Backups of edited files
 *~
 
+# Automatically generated Python file
+__init__.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
