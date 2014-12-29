@@ -1,7 +1,7 @@
 Chrooms
 =======
 
-Chrooms (short for "Changing Rooms") glues together a Team Fortress 2 (TF2) server and Mumble server, and moves users to the Mumble chatroom corresponding to the team they are playing on at the moment. Chrooms might also work for Source games other than TF2.
+Chrooms (short for "Changing Rooms") glues together a Team Fortress 2 (TF2) server and Mumble server, and moves users to the Mumble chat room corresponding to the team they are playing on at the moment. Chrooms might also work for Source games other than TF2.
 
 Installation instructions:
 
