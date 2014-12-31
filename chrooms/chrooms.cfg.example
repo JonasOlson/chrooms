@@ -1,10 +1,10 @@
 [Mumble]
 
 # Details for connecting to the Mumble server
-host: localhost
+host: mumble.example.com
 port: 6502
-secret:
+secret: hunter2
 
 # Names of the Mumble chat rooms for the two TF2 teams
-BLU_room: Byggarnas allians 
+BLU_room: Byggarnas allians
 RED_room: Driftsäker utgrävning och demolering

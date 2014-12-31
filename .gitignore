@@ -58,3 +58,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Site specific config file
+chrooms.cfg
