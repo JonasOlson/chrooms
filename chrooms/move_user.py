@@ -6,6 +6,7 @@ Ice.loadSlice('', ['-I' + Ice.getSliceDir(), 'murmur.ice'])
 import Murmur
 import sys
 import configparser
+import re
 
 # Read configuration.
 config = configparser.ConfigParser()
@@ -32,14 +33,34 @@ channels = server.getChannels()
 username = sys.argv[1]
 channel_name = rooms[sys.argv[2]]
 
-def is_similar(name0, name1):
-    return name0.strip().lower() == name1.strip().lower()
+def normalise(name):
+    return name.strip().lower()
+
+def is_similar_username(mumble_name, tf2_name):
+    def substitute(original_str):
+        if original_str.isspace():
+            return '[-_' + re.escape(original_str) + ']?'
+        else:
+            return re.escape(original_str)
+
+    mumble_name = normalise(mumble_name)
+    tf2_name = normalise(tf2_name)
+
+    tf2_name_tokens = re.split('(\s)', tf2_name)
+    pattern = ''.join(map(substitute, tf2_name_tokens))
+    if re.compile(pattern).fullmatch(mumble_name):
+        return True
+    else:
+        return False
+
+def is_similar_room_name(mumble_name, tf2_name):
+    return normalise(mumble_name) == normalise(tf2_name)
 
 # Move user.
 for c in channels.values():
-    if is_similar(c.name, channel_name):
+    if is_similar_room_name(c.name, channel_name):
         for u in users.values():
-            if is_similar(u.name, username):
+            if is_similar_username(u.name, username):
                 u.channel = c.id
                 server.setState(u)
         break
