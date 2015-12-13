@@ -15,8 +15,8 @@ mumble_config = config['Mumble']
 mumble_host = mumble_config['host']
 mumble_port = mumble_config['port']
 mumble_secret = mumble_config['secret']
-rooms = {'RED': mumble_config['RED_room'],
-         'BLU': mumble_config['BLU_room']}
+rooms = {'Red': mumble_config['RED_room'],
+         'Blue': mumble_config['BLU_room']}
 
 # Set up a connection to the Mumble server.
 props = Ice.createProperties()

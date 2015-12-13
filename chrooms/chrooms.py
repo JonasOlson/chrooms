@@ -9,8 +9,8 @@ import os
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-team_names = {2: 'RED',
-              3: 'BLU'}
+team_names = {2: 'Red',
+              3: 'Blue'}
 
 # Called when this script is loaded. Move all players.
 def load():
