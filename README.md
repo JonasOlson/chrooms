@@ -22,7 +22,7 @@ Log Watcher
 EventScripts
 ------------
 
-0. Install EventScripts on the TF2 server by extracting [build 379](http://forums.eventscripts.com/viewtopic.php?p=407186#p407186) to the directory `tf/`. (The forum post says that build 379 is intended for Counter Strike, but using this version seems to be the only way to get it to work for TF2.) EventScripts generates an error message when the TF2 server starts, but it doesn't affect us.
+0. Install EventScripts on the TF2 server by extracting [build 379](https://web.archive.org/web/20161105042925/http://forums.eventscripts.com/viewtopic.php?p=407186#p407186) to the directory `tf/`. (The forum post says that build 379 is intended for Counter Strike, but using this version seems to be the only way to get it to work for TF2.) EventScripts generates an error message when the TF2 server starts, but it doesn't affect us.
 0. Get chrooms by running `git clone https://github.com/JonasOlson/chrooms.git` in a directory of your choice.
 0. Create a symbolic link to `chrooms/chrooms` from `tf/addons/eventscripts/chrooms` by running `ln -s chrooms/chrooms tf/addons/eventscripts/chrooms`. The exact path to the tf directory depends on where your TF2-server is installed.
 0. Copy the example config `tf/addons/eventscripts/chrooms/chrooms.cfg.example` to `tf/addons/eventscripts/chrooms/chrooms.cfg`.
